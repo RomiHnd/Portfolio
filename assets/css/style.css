@@ -1,0 +1,1072 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.sidebar {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.sidebar .profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.sidebar .social-icons a {
+  margin: 5px;
+  color: #9B3922;
+  font-size: 20px;
+}
+.sidebar .social-icons a:hover {
+  color: red;
+  transition: 0.6s;
+}
+.sidebar .social-icons a i:hover {
+  transform: scale(1.5);
+  transition: 0.6s;
+}
+.sidebar .info {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+.sidebar .info p {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.sidebar .info strong {
+  background: #9B3922;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.languages, .skills {
+  width: 250px;
+  font-family: Arial, sans-serif;
+}
+.languages h2, .skills h2 {
+  font-size: 1.2rempx;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.languages .language, .languages .skill, .skills .language, .skills .skill {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.languages .language .label, .languages .skill .label, .skills .language .label, .skills .skill .label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #444;
+}
+.languages .language .progress-bar, .languages .skill .progress-bar, .skills .language .progress-bar, .skills .skill .progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.languages .language .progress-bar .progress, .languages .skill .progress-bar .progress, .skills .language .progress-bar .progress, .skills .skill .progress-bar .progress {
+  height: 100%;
+  background: #F2613F;
+  border-radius: 5px;
+}
+
+.right-sidebar {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.right-sidebar a {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+.right-sidebar a:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+.right-sidebar a i {
+  font-size: 18px;
+  color: #F2613F;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.line {
+  height: 1px;
+  background-color: #b3b1b1;
+}
+
+.bio {
+  position: relative;
+  text-align: center;
+  padding: 40px;
+  background-color: white;
+}
+.bio h1 span {
+  color: #9B3922;
+  font-size: 2rem;
+}
+.bio p {
+  width: 700px;
+  margin: auto;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+.bio .btn {
+  display: inline-block;
+  background: #9B3922;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.bio .btn:hover {
+  transform: scale(1.1);
+  transition: 0.8s;
+  border-color: #d84315;
+  background-color: white;
+  color: #d84315;
+}
+.bio .btn:hover a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #d84315;
+}
+.bio .btn a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.services {
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.service:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.service i {
+  font-size: 30px;
+  color: #9B3922;
+  margin-bottom: 10px;
+}
+
+.pricing {
+  max-width: 900px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pricing .pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.pricing .pricing-container .plan {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.pricing .pricing-container .plan:hover {
+  transform: scale(0.95);
+  transition: 1s;
+}
+.pricing .pricing-container .plan h3 {
+  color: #333;
+  font-size: 1.5rem;
+}
+.pricing .pricing-container .plan .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+}
+.pricing .pricing-container .plan .price span {
+  font-size: 14px;
+  color: #777;
+}
+.pricing .pricing-container .plan ul {
+  list-style: none;
+  text-align: left;
+}
+.pricing .pricing-container .plan ul li {
+  padding: 5px 0;
+}
+.pricing .pricing-container .plan button {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  border-radius: 5px;
+  transition: background 0.8s ease;
+}
+.pricing .pricing-container .plan button:hover {
+  background: #F2613F;
+}
+
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.recommendations h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.recommendations .recommendations-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.recommendations .recommendations-container .comments {
+  padding: 20px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.recommendations .recommendations-container .comments:hover {
+  background-color: rgb(242, 242, 236);
+  transition: 0.8s;
+}
+.recommendations .recommendations-container .comments .stars {
+  color: gold;
+  font-size: 20px;
+}
+.recommendations .recommendations-container .comments .user {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.recommendations .recommendations-container .comments .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.recommendations .recommendations-container .comments .user .user-info {
+  display: flex;
+  flex-direction: column;
+}
+.recommendations .recommendations-container .comments .user .user-info .name {
+  padding-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.recommendations .recommendations-container .comments .user .user-info .job {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.education h2 {
+  padding-top: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.work-history h2 {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.education-container {
+  display: grid;
+  gap: 0px;
+}
+
+.item {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+.item .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.item .content h3 {
+  font-size: 18px;
+  color: #333;
+}
+.item .content .role {
+  font-weight: bold;
+  color: #9B3922;
+}
+.item .content h4 {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.item .content .description {
+  color: #666;
+  font-size: 14px;
+}
+.item .badge {
+  background: #f5a623;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.portfolio {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio h2 {
+  font-size: 1.6rem;
+}
+.portfolio .portfolio-container {
+  width: 100%;
+}
+.portfolio .portfolio-container .list {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio .portfolio-container .list .list-item {
+  font-weight: 600;
+  font-size: 1.2rem;
+  list-style: none;
+}
+.portfolio .portfolio-container .list .list-item a {
+  color: black;
+  text-decoration: none;
+}
+.portfolio .portfolio-container .list .list-item a:hover {
+  background-color: rgba(218, 117, 2, 0.3);
+  border-radius: 8px;
+  padding: 5px;
+  transition: 1s;
+}
+.portfolio .portfolio-container .list .list-item a.active {
+  color: #F2613F;
+  font-weight: bold;
+}
+.portfolio .portfolio-container .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.portfolio .portfolio-container .gallery .img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.portfolio .portfolio-container .gallery .img img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.user-container {
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.user-container .your-info {
+  width: 60%;
+}
+.user-container .your-info h3 {
+  font-size: 1.6rem;
+}
+.user-container .your-info form {
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.user-container .your-info form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.user-container .your-info form input, .user-container .your-info form textarea {
+  margin-bottom: 15px;
+  padding: 8px;
+  border: none;
+  background-color: #e2e2e2;
+}
+.user-container .your-info form textarea {
+  height: 120px;
+}
+.user-container .your-info form button {
+  color: white;
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  background-color: #F2613F;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.user-container .contact-info {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.user-container .contact-info h3 {
+  font-size: 1.6rem;
+}
+.user-container .contact-info .box {
+  padding: 15px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100px;
+}
+.user-container .contact-info .box .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2613F;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.user-container .contact-info .box .icon-container i {
+  font-size: 1.2rem;
+  color: white;
+}
+.user-container .contact-info .box ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 25px;
+}
+.user-container .contact-info .box ul li {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .user-container {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+  .user-container .your-info,
+  .user-container .contact-info {
+    width: 80%;
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  .sidebar .info {
+    padding-top: 22px;
+  }
+  .sidebar .languages, .sidebar .skills {
+    width: 180px;
+  }
+  .right-sidebar {
+    display: none;
+  }
+  .content {
+    padding: 20px;
+  }
+  .bio {
+    padding: 20px;
+    text-align: center;
+  }
+  .bio img {
+    position: static;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+  .bio p {
+    width: 100%;
+  }
+  .service-list {
+    flex-direction: row;
+    align-items: center;
+  }
+  .pricing .pricing-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .pricing .pricing-container .plan {
+    width: 90%;
+  }
+  .recommendations .recommendations-container {
+    grid-template-columns: 1fr;
+  }
+  .portfolio .portfolio-container .list {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  .portfolio .portfolio-container .gallery {
+    grid-template-columns: 1fr;
+  }
+  .education-container .item .content {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+  .container .your-info,
+  .container .contact-info {
+    width: 90%;
+  }
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar .info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .sidebar .info p {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+  }
+  .sidebar .info strong {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+  .sidebar .social-icons a {
+    margin: 3px;
+  }
+  .sidebar .social-icons a i {
+    font-size: 25px;
+  }
+  .sidebar .profile img {
+    width: 120px;
+    height: 120px;
+  }
+  .sidebar .profile h2 {
+    font-size: 1rem;
+  }
+  .sidebar .profile p {
+    font-size: 1rem;
+  }
+  .sidebar .profile i {
+    font-size: 1.5rem;
+  }
+  .sidebar .ability {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .sidebar .ability .languages {
+    width: 45%;
+  }
+  .sidebar .ability .skills {
+    width: 45%;
+  }
+  .right-sidebar {
+    display: none;
+  }
+  .content {
+    padding: 20px;
+  }
+  .bio {
+    padding: 20px;
+    text-align: center;
+  }
+  .bio img {
+    position: static;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+  .bio p {
+    width: 100%;
+  }
+  .service-list {
+    flex-direction: row;
+    align-items: center;
+  }
+  .pricing .pricing-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .pricing .pricing-container .plan {
+    width: 90%;
+  }
+  .pricing .pricing-container .plan ul li {
+    font-size: 0.7rem;
+  }
+  .recommendations .recommendations-container {
+    grid-template-columns: 1fr;
+  }
+  .portfolio .portfolio-container .list {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  .portfolio .portfolio-container .gallery {
+    grid-template-columns: 1fr;
+  }
+  .education .item .content {
+    grid-template-columns: 1fr;
+  }
+  .education .item .content .description {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar .info {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    justify-content: space-between;
+  }
+  .sidebar .info p {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    text-align: center;
+  }
+  .sidebar .info strong {
+    font-size: 0.5rem;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 8px;
+  }
+  .sidebar .social-icons a {
+    margin: 3px;
+  }
+  .sidebar .social-icons a i {
+    font-size: 15px;
+  }
+  .sidebar .profile img {
+    width: 120px;
+    height: 120px;
+  }
+  .sidebar .profile h2 {
+    font-size: 1rem;
+  }
+  .sidebar .profile p {
+    font-size: 1rem;
+  }
+  .sidebar .profile i {
+    font-size: 1.5rem;
+  }
+  .sidebar .ability {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .sidebar .languages, .sidebar .skills {
+    width: 50%;
+  }
+  .sidebar .languages h3, .sidebar .skills h3 {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 5px;
+  }
+  .sidebar .languages .language, .sidebar .languages .skill, .sidebar .skills .language, .sidebar .skills .skill {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .sidebar .languages .language .label, .sidebar .languages .skill .label, .sidebar .skills .language .label, .sidebar .skills .skill .label {
+    font-weight: 600;
+  }
+  .sidebar .languages .language .progress-bar, .sidebar .languages .skill .progress-bar, .sidebar .skills .language .progress-bar, .sidebar .skills .skill .progress-bar {
+    width: 100%;
+    height: 5px;
+    margin-top: 5px;
+  }
+  .content {
+    order: 3;
+    padding: 10px;
+    width: 100%;
+  }
+  .content h1 {
+    font-size: 18px;
+  }
+  .content h1 span {
+    font-size: 25px;
+  }
+  .content h2 {
+    font-size: 18px;
+  }
+  .content p {
+    font-size: 15px;
+  }
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .languages,
+  .skills,
+  .info {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  .service-list {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  .service {
+    flex: 1;
+    padding: 10px;
+  }
+  .service i {
+    font-size: 16px;
+    color: #9B3922;
+    margin-bottom: 5px;
+    padding: 2px;
+  }
+  .service h3 {
+    font-size: 12px;
+    margin: 0px;
+    padding: 2px;
+  }
+  .service p {
+    font-size: 8px;
+  }
+  .pricing {
+    max-width: 98%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing .pricing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .pricing .pricing-container .plan {
+    line-height: 10px;
+    padding: 5px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .pricing .pricing-container .plan h3 {
+    font-size: 1rem;
+  }
+  .pricing .pricing-container .plan p {
+    font-size: 10px;
+  }
+  .pricing .pricing-container .plan .price {
+    font-size: 1rem;
+  }
+  .pricing .pricing-container .plan .price span {
+    font-size: 12px;
+  }
+  .pricing .pricing-container .plan ul li {
+    padding: 2px 0;
+  }
+  .pricing .pricing-container .plan button {
+    font-weight: bold;
+    margin: auto;
+    padding: 8px;
+    font-size: 8px;
+  }
+  .recommendations {
+    display: flex;
+    flex-direction: column;
+  }
+  .recommendations h2 {
+    font-size: 1.1rem;
+  }
+  .recommendations .recommendations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+  }
+  .recommendations .recommendations-container .comments {
+    padding: 10px 10px;
+  }
+  .recommendations .recommendations-container .comments .stars {
+    font-size: 10px;
+  }
+  .recommendations .recommendations-container .comments h3 {
+    font-size: 15px;
+  }
+  .recommendations .recommendations-container .comments p {
+    font-size: 12px;
+  }
+  .recommendations .recommendations-container .comments .user {
+    margin-top: 5px;
+  }
+  .recommendations .recommendations-container .comments .user img {
+    width: 30px;
+    height: 30px;
+  }
+  .recommendations .recommendations-container .comments .user .user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 5px;
+  }
+  .recommendations .recommendations-container .comments .user .user-info .name {
+    padding-top: 10px;
+    font-size: 0.8rem;
+  }
+  .recommendations .recommendations-container .comments .user .user-info .job {
+    font-size: 0.6rem;
+  }
+  .education h2 {
+    padding-top: 20px;
+    width: 100%;
+  }
+  .work-history h2 {
+    font-size: 1rem;
+    padding-top: 20px;
+  }
+  .work-history .item .content h3 {
+    font-size: 0.6rem;
+  }
+  .work-history .item .badge {
+    font-size: 0.6rem;
+  }
+  .education-container {
+    display: grid;
+    gap: 0px;
+  }
+  .item {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+  }
+  .item .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .item .content h3 {
+    font-size: 10px;
+  }
+  .item .content .role {
+    font-weight: bold;
+  }
+  .item .content h4 {
+    font-size: 10px;
+  }
+  .item .content .role {
+    font-size: 12px;
+  }
+  .item .content .description {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .item .badge {
+    padding: 3px 8px;
+    font-size: 7px;
+    white-space: nowrap;
+  }
+  .portfolio {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolio h2 {
+    font-size: 1.1rem;
+  }
+  .portfolio .portfolio-container {
+    width: 100%;
+  }
+  .portfolio .portfolio-container .list {
+    padding: 10px;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .portfolio .portfolio-container .list .list-item {
+    font-size: 0.6rem;
+  }
+  .portfolio .portfolio-container .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .user-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  .user-container .your-info {
+    width: 48%;
+  }
+  .user-container .your-info h3 {
+    font-size: 0.7rem;
+  }
+  .user-container .your-info form {
+    padding: 10px;
+  }
+  .user-container .your-info form label {
+    margin-bottom: 5px;
+    font-size: 0.5rem;
+  }
+  .user-container .your-info form input {
+    height: 10px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: none;
+    background-color: #e2e2e2;
+    border-radius: 5px;
+  }
+  .user-container .your-info form textarea {
+    border-radius: 5px;
+    height: 70px;
+    border: none;
+    background-color: #e2e2e2;
+  }
+  .user-container .your-info form button {
+    font-size: 0.5rem;
+    width: 100%;
+    height: 20px;
+  }
+  .user-container .contact-info {
+    width: 50%;
+    gap: 10px;
+  }
+  .user-container .contact-info h3 {
+    font-size: 0.7rem;
+  }
+  .user-container .contact-info .box {
+    padding: 5px;
+    align-items: center;
+    gap: 5px;
+    height: 50px;
+    border-radius: 5px;
+  }
+  .user-container .contact-info .box .icon-container {
+    width: 25px;
+    height: 25px;
+  }
+  .user-container .contact-info .box .icon-container i {
+    font-size: 0.9rem;
+    color: white;
+  }
+  .user-container .contact-info .box ul {
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+  }
+  .user-container .contact-info .box ul li {
+    font-size: 0.5rem;
+    font-weight: bold;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
